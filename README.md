@@ -22,6 +22,13 @@ This configuration allows for a single type to be added as a dependency into bot
 
 If you were to use a database context instance such as EF6 IDBContext and want to dispose it along the lines of web api Request/Response, but also like to dispose it at the end of each scheduled job, it is possible with the way Unity is configured in this sample project.
 
+#Important
+Following 3 files have most of the important configuration details
+
+* UnityMvcActivator.cs - setup asp.net mvc / webapi and unity DI with PerRequestLifetimeManager
+* QuartzStartup.cs - setup quartz scheduler and unity DI with HierarchicalLifetimeManager
+* UnityConfig.cs - setup type registrations with unity DI
+
 #Dependencies
 
 This project internally uses following dependencies

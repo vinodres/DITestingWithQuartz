@@ -15,6 +15,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Testing.Scheduler.HelloService.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Testing.Scheduler.HelloWorldJob">
             <summary>
             

@@ -1,9 +1,11 @@
-﻿namespace Testing.Scheduler
+﻿using System;
+
+namespace Testing.Scheduler
 {
     /// <summary>
     /// 
     /// </summary>
-    public interface IHelloService
+    public interface IHelloService : IDisposable
     {
         /// <summary>
         /// 

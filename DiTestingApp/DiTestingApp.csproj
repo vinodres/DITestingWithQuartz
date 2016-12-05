@@ -208,14 +208,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CarService.cs" />
-    <Compile Include="Models\EngineDiagnosticsService.cs" />
-    <Compile Include="Models\EngineService.cs" />
-    <Compile Include="Models\ICarService.cs" />
-    <Compile Include="Models\IEngineDiagnosticsService.cs" />
-    <Compile Include="Models\IEngineService.cs" />
-    <Compile Include="Models\IVehicleService.cs" />
-    <Compile Include="Models\VehicleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

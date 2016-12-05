@@ -1,5 +1,4 @@
 using System;
-using DiTestingApp.Models;
 using Microsoft.Practices.Unity;
 using Quartz;
 using Testing.Scheduler;
@@ -7,7 +6,7 @@ using Testing.Scheduler;
 namespace DiTestingApp
 {
     /// <summary>
-    /// Specifies the Unity configuration for the main container.
+    /// Register types
     /// </summary>
     public static class UnityConfig
     {
@@ -20,11 +19,7 @@ namespace DiTestingApp
         public static IUnityContainer Configure(this IUnityContainer container, Func<LifetimeManager> disposableLifetimeManager )
         {
             
-            container.RegisterType<ICarService, CarService>();
-            container.RegisterType<IEngineDiagnosticsService, EngineDiagnosticsService>();
-            container.RegisterType<IEngineService, EngineService>();
-            container.RegisterType<IVehicleService, VehicleService>(disposableLifetimeManager());
-            container.RegisterType<IJob, HelloWorldJob>(disposableLifetimeManager());
+            container.RegisterType<IJob, HelloWorldJob>();
             container.RegisterType<IHelloService, HelloService>(disposableLifetimeManager());
             return container;
         }

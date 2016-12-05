@@ -65,7 +65,7 @@
         </member>
         <member name="T:DiTestingApp.UnityConfig">
             <summary>
-            Specifies the Unity configuration for the main container.
+            Register types
             </summary>
         </member>
         <member name="M:DiTestingApp.UnityConfig.Configure(Microsoft.Practices.Unity.IUnityContainer,System.Func{Microsoft.Practices.Unity.LifetimeManager})">
@@ -174,129 +174,6 @@
             </summary>
         </member>
         <member name="M:DiTestingApp.WebApiApplication.Application_Start">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.CarService">
-            <summary>
-            Car service
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.CarService.#ctor(DiTestingApp.Models.IVehicleService)">
-            <summary>
-            IVehicle service is the dependency
-            </summary>
-            <param name="vehicleService"></param>
-        </member>
-        <member name="M:DiTestingApp.Models.CarService.GoToDestination">
-            <summary>
-            go to destination
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.EngineDiagnosticsService">
-            <summary>
-            Engine Diagnostics Service
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.EngineDiagnosticsService.CaptureDiagnostics">
-            <summary>
-            Capture Diagnostics
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.EngineService">
-            <summary>
-            engine service
-            </summary>
-        </member>
-        <member name="P:DiTestingApp.Models.EngineService.EngineModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.EngineService.Start">
-            <summary>
-            start the engine
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.ICarService">
-            <summary>
-            car service
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.ICarService.GoToDestination">
-            <summary>
-            go to destination
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.IEngineDiagnosticsService">
-            <summary>
-            Engine Diagnostics Service
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.IEngineDiagnosticsService.CaptureDiagnostics">
-            <summary>
-            Capture Diagnostics
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.IEngineService">
-            <summary>
-            Engine Service
-            </summary>
-        </member>
-        <member name="P:DiTestingApp.Models.IEngineService.EngineModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.IEngineService.Start">
-            <summary>
-            start
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.IVehicleService">
-            <summary>
-            Vehicle Service
-            </summary>
-        </member>
-        <member name="P:DiTestingApp.Models.IVehicleService.VehicleType">
-            <summary>
-            vehicle type
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.IVehicleService.ShowDiagnostics">
-            <summary>
-            show diagnostics
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.IVehicleService.Drive">
-            <summary>
-            start driving
-            </summary>
-        </member>
-        <member name="T:DiTestingApp.Models.VehicleService">
-            <summary>
-            Vehicle Service
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.VehicleService.#ctor(DiTestingApp.Models.IEngineService,DiTestingApp.Models.IEngineDiagnosticsService)">
-            <summary>
-            
-            </summary>
-            <param name="engineService"></param>
-            <param name="diagnosticsService"></param>
-        </member>
-        <member name="P:DiTestingApp.Models.VehicleService.VehicleType">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.VehicleService.ShowDiagnostics">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:DiTestingApp.Models.VehicleService.Drive">
             <summary>
             
             </summary>

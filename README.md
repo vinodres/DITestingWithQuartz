@@ -29,3 +29,30 @@ This project internally uses following dependencies
 * Unity.AspNet.WebApi v4.0.1 Nuget package and its dependencies
 * Unity.Mvc v4.0.1 Nuget package
 * WebActivatorEx v2.2.0 Nuget package
+
+#How to test?
+
+As soon as you run the project, a log file is created at c:\logs\DITesting\DITesting.log. Every 20 seconds you start seeing following log entires
+
+12-05-2016 10:51:17 DEBUG [0108M712318D, ] Trigger instruction : NoInstruction
+
+12-05-2016 10:51:22 DEBUG [0108M712318D, ] Producing instance of Job 'DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6', class=Testing.Scheduler.HelloWorldJob
+
+12-05-2016 10:51:22 DEBUG [0108M712318D, ] Batch acquisition of 1 triggers
+
+12-05-2016 10:51:22 DEBUG [0108M712318D, ] Calling Execute on job DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6
+
+12-05-2016 10:51:22 DEBUG [0108M712318D, ] 
+****
+Job DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6 fired @ Mon, 05 Dec 2016 15:51:22 GMT next scheduled for Mon, 05 Dec 2016 15:51:27 GMT
+***
+
+12-05-2016 10:51:22 DEBUG [0108M712318D, ] 
+***
+Hello World! from Quartz Job!
+***
+
+
+And if you try to access the http://localhost/DITestingApp/api/Greetings REST end point, you will get following response back 
+
+Hello World! from Greetings REST api

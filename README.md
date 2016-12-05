@@ -23,9 +23,9 @@ If you were to use a database context instance such as EF6 IDBContext and want t
 
 This project internally uses following dependencies
 (Minimum packages required to setup Unity with Quartz and Asp.Net web api)
-1. Quartz.NET Nuget package https://www.nuget.org/packages/Quartz/
-2. Quartz.Unity Nuget package and its dependencies https://github.com/hbiarge/Quartz.Unity
-3. Microsoft.Owin.Host.SystemWeb Nuget package v3.0.1 and its dependencies https://www.nuget.org/packages/Microsoft.Owin.Host.SystemWeb/
-4. Unity.AspNet.WebApi v4.0.1 Nuget package and its dependencies
-5. Unity.Mvc v4.0.1 Nuget package
-6. WebActivatorEx v2.2.0 Nuget package
+* Quartz.NET Nuget package https://www.nuget.org/packages/Quartz/
+* Quartz.Unity Nuget package and its dependencies https://github.com/hbiarge/Quartz.Unity
+* Microsoft.Owin.Host.SystemWeb Nuget package v3.0.1 and its dependencies https://www.nuget.org/packages/Microsoft.Owin.Host.SystemWeb/
+* Unity.AspNet.WebApi v4.0.1 Nuget package and its dependencies
+* Unity.Mvc v4.0.1 Nuget package
+* WebActivatorEx v2.2.0 Nuget package

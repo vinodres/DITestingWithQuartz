@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Testing.Scheduler</name>
+    </assembly>
+    <members>
+        <member name="T:Testing.Scheduler.HelloService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testing.Scheduler.HelloService.GetHello(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Testing.Scheduler.HelloWorldJob">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testing.Scheduler.HelloWorldJob.#ctor(Testing.Scheduler.IHelloService)">
+            <summary> 
+            constructor for job initilization
+            Inject any services that this job depends on.
+            </summary>
+        </member>
+        <member name="M:Testing.Scheduler.HelloWorldJob.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            Invoke IHelloService from HelloWorldJob scheduled using Quartz.net. 
+            IHelloService is registered with another instance of unity container owned by Owin startup for Quartz scheduled job using HierarchicalLifetimeManager.
+            IHelloService is also registered with unity container owned by asp.net web api dependency resolver using PerRequestLifetimeManager.
+            When IHelloService is accessed by a Quartz job, it is resolved using HierarchicalLifetimeManager and when IHelloService is accessed via asp.net web api controller, it is resolved using PerRequestLifetimeManager.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Testing.Scheduler.IHelloService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testing.Scheduler.IHelloService.GetHello(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Testing.Scheduler.IScheduledJob">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testing.Scheduler.IScheduledJob.Run">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DiTestingApp</name>
+    </assembly>
+    <members>
+        <member name="T:DiTestingApp.BundleConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:DiTestingApp.FilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:DiTestingApp.QuartzStartup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DiTestingApp.QuartzStartup.QuartzContainer">
+            <summary>
+            Get the hangfire container.
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.QuartzStartup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:DiTestingApp.RouteConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:DiTestingApp.SwaggerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.SwaggerConfig.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.UnityConfig.Configure(Microsoft.Practices.Unity.IUnityContainer,System.Func{Microsoft.Practices.Unity.LifetimeManager})">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+            <param name="disposableLifetimeManager"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DiTestingApp.App_Start.UnityWebActivator">
+            <summary>Provides the bootstrapping for integrating Unity with ASP.NET MVC.</summary>
+        </member>
+        <member name="F:DiTestingApp.App_Start.UnityWebActivator.WebContainer">
+            <summary>
+            Get the hangfire container.
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.App_Start.UnityWebActivator.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:DiTestingApp.App_Start.UnityWebActivator.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="T:DiTestingApp.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:DiTestingApp.Controllers.GreetingsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Controllers.GreetingsController.#ctor(Testing.Scheduler.IHelloService)">
+            <summary>
+            
+            </summary>
+            <param name="helloService"></param>
+        </member>
+        <member name="M:DiTestingApp.Controllers.GreetingsController.Get">
+            <summary>
+            Invoke IHelloService from REST api. IHelloService is registered with unity container owned by asp.net web api dependency resolver using PerRequestLifetimeManager.
+            IHelloService is also registered with another instance of unity container owned by Owin startup for Quartz scheduled job using HierarchicalLifetimeManager.
+            When IHelloService is accessed by a Quartz job, it is resolved using HierarchicalLifetimeManager and when IHelloService is accessed via asp.net web api controller, it is resolved using PerRequestLifetimeManager.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DiTestingApp.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DiTestingApp.Controllers.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Controllers.ValuesController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DiTestingApp.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiTestingApp.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DiTestingApp.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:DiTestingApp.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:DiTestingApp.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.CarService">
+            <summary>
+            Car service
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.CarService.#ctor(DiTestingApp.Models.IVehicleService)">
+            <summary>
+            IVehicle service is the dependency
+            </summary>
+            <param name="vehicleService"></param>
+        </member>
+        <member name="M:DiTestingApp.Models.CarService.GoToDestination">
+            <summary>
+            go to destination
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.EngineDiagnosticsService">
+            <summary>
+            Engine Diagnostics Service
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.EngineDiagnosticsService.CaptureDiagnostics">
+            <summary>
+            Capture Diagnostics
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.EngineService">
+            <summary>
+            engine service
+            </summary>
+        </member>
+        <member name="P:DiTestingApp.Models.EngineService.EngineModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.EngineService.Start">
+            <summary>
+            start the engine
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.ICarService">
+            <summary>
+            car service
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.ICarService.GoToDestination">
+            <summary>
+            go to destination
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.IEngineDiagnosticsService">
+            <summary>
+            Engine Diagnostics Service
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.IEngineDiagnosticsService.CaptureDiagnostics">
+            <summary>
+            Capture Diagnostics
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.IEngineService">
+            <summary>
+            Engine Service
+            </summary>
+        </member>
+        <member name="P:DiTestingApp.Models.IEngineService.EngineModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.IEngineService.Start">
+            <summary>
+            start
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.IVehicleService">
+            <summary>
+            Vehicle Service
+            </summary>
+        </member>
+        <member name="P:DiTestingApp.Models.IVehicleService.VehicleType">
+            <summary>
+            vehicle type
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.IVehicleService.ShowDiagnostics">
+            <summary>
+            show diagnostics
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.IVehicleService.Drive">
+            <summary>
+            start driving
+            </summary>
+        </member>
+        <member name="T:DiTestingApp.Models.VehicleService">
+            <summary>
+            Vehicle Service
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.VehicleService.#ctor(DiTestingApp.Models.IEngineService,DiTestingApp.Models.IEngineDiagnosticsService)">
+            <summary>
+            
+            </summary>
+            <param name="engineService"></param>
+            <param name="diagnosticsService"></param>
+        </member>
+        <member name="P:DiTestingApp.Models.VehicleService.VehicleType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.VehicleService.ShowDiagnostics">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DiTestingApp.Models.VehicleService.Drive">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

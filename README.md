@@ -1,4 +1,4 @@
-# Unity DI Testing With Quartz in ASP.NET Webapi
+# How to configure Unity DI With Quartz in ASP.NET Webapi? - demo project
 Unity DI Testing With Quartz in ASP.NET Webapi
 
 This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler.

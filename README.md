@@ -1,11 +1,11 @@
 # How to configure Unity DI With Quartz in ASP.NET Webapi? - demo project
 Unity DI Testing With Quartz in ASP.NET Webapi
 
-This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler.
+This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler. IHelloService is a disposable type which must be disposed at the end of each job execution as well as it must be disposed for each http request.
 
 For more information regarding Quartz.Net, please visit http://www.quartz-scheduler.net/documentation/quartz-2.x/tutorial/index.html
 
-This sample project is created using Visual Studio 2015 and the asp.net web api test project is setup with .net 4.6.1 framework.
+This sample project is created using Visual Studio 2015 and the asp.net web api test project is setup with .net 4.6.1 framework. For simplicity purposes, types are registered individually instead of using register by convention.
 
 To run this project, please clone it or download and then create an IIS virtual directory pointing to the DITestingApp folder with just Anonymous Authentication enabled. This application writes to log files located at c:\logs\DITesting\, but you can always change the path to a desired location by editing web.config log4net section.
 

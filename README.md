@@ -11,7 +11,7 @@ This sample project is created using Visual Studio 2015 and the asp.net web api 
 
 To run this project, please clone it or download and then create an IIS virtual directory pointing to the DITestingApp folder with just Anonymous Authentication enabled. This application writes to log files located at c:\logs\DITesting\, but you can always change the path to a desired location by editing web.config log4net section.
 
-The project is configured such that, the IHelloService GetHello method is invoked every 20 secs using Quartz scheduled job called HelloWorldJob. Quartz scheduler intitialization is done using Owin startup. 
+A Quartz job called HelloWorldJob is invoked every 20 secs using Quartz scheduler. Quartz scheduler intitialization is done using Owin startup. HelloWorldJob has a dependency on IHelloService and GetHello method is invoked as part of Job execution. IHelloService is a disposable type.
 
 Two isolated instances of IUnityContainer are maintained. One instance is used by asp.net web api Request/Response pipeline and another instance used by Quartz Owin startup. All the type registrations are maintained by both unity containers. 
 

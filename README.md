@@ -1,4 +1,5 @@
-# How to configure Unity DI With Quartz in ASP.NET Webapi? - demo project
+# How to configure Unity Dependency Injection With Quartz scheduler in ASP.NET Webapi?
+
 Unity DI Testing With Quartz in ASP.NET Webapi
 
 This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler. IHelloService is a disposable type which must be disposed at the end of each job execution as well as it must be disposed for each http request. 

@@ -45,15 +45,20 @@ As soon as you run the project, a log file is created at c:\logs\DITesting\DITes
 > 12-05-2016 13:21:26 DEBUG [2318D, ] 
 
 > ****
+
 > Job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557 fired @ Mon, 05 Dec 2016 18:21:26 GMT next scheduled for Mon, 05 Dec 2016 18:21:46 GMT
+
 > ***
 > 
+
 > 12-05-2016 13:21:26 DEBUG [2318D, ] 
+
 > ***
 > Hello World! from Quartz Job!
 > ***
 > 
 > 12-05-2016 13:21:26 INFO  [2318D, ] Disposed HelloService instance [4]
+
 > 12-05-2016 13:21:26 DEBUG [2318D, ] Trigger instruction : NoInstruction
 > 
 

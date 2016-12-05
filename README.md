@@ -67,6 +67,8 @@ And if you try to access the http://localhost/DITestingApp/api/Greetings REST en
 >> Hello World! from Greetings REST api
 
 followed by these log entries in the log file
+
 > 12-05-2016 13:26:21 INFO  [2318D, ] Created HelloService instance [20]
+
 > 12-05-2016 13:26:21 INFO  [2318D, ] Disposed HelloService instance [20]
 

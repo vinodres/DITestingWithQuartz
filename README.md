@@ -18,3 +18,14 @@ Asp.Net web api owned IUnityContainer allows the types to be registered with Per
 This configuration allows for a single type to be added as a dependency into both webapi Controllers as well as Quartz jobs and depending on the execution path, appropriate instance of IUnityContainer helps resolve the dependency.
 
 If you were to use a database context instance such as EF6 IDBContext and want to dispose it along the lines of web api Request/Response, but also like to dispose it at the end of each scheduled job, it is possible with the way Unity is configured in this sample project.
+
+#Dependencies
+
+This project internally uses following dependencies
+(Minimum packages required to setup Unity with Quartz and Asp.Net web api)
+1. Quartz.NET Nuget package https://www.nuget.org/packages/Quartz/
+2. Quartz.Unity Nuget package and its dependencies https://github.com/hbiarge/Quartz.Unity
+3. Microsoft.Owin.Host.SystemWeb Nuget package v3.0.1 and its dependencies https://www.nuget.org/packages/Microsoft.Owin.Host.SystemWeb/
+4. Unity.AspNet.WebApi v4.0.1 Nuget package and its dependencies
+5. Unity.Mvc v4.0.1 Nuget package
+6. WebActivatorEx v2.2.0 Nuget package

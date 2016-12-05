@@ -1,11 +1,13 @@
 # How to configure Unity DI With Quartz in ASP.NET Webapi? - demo project
 Unity DI Testing With Quartz in ASP.NET Webapi
 
-This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler.
+This sample project demonstrates how to setup Unity DI inside asp.net web api project with Quartz.net job scheduler. IHelloService is a disposable type which must be disposed at the end of each job execution as well as it must be disposed for each http request. 
+
+I have used Quartz.Unity Nuget package https://github.com/hbiarge/Quartz.Unity. I really appreciate the owner of this package. Thank you.
 
 For more information regarding Quartz.Net, please visit http://www.quartz-scheduler.net/documentation/quartz-2.x/tutorial/index.html
 
-This sample project is created using Visual Studio 2015 and the asp.net web api test project is setup with .net 4.6.1 framework.
+This sample project is created using Visual Studio 2015 and the asp.net web api test project is setup with .net 4.6.1 framework. For simplicity purposes, types are registered individually instead of using register by convention.
 
 To run this project, please clone it or download and then create an IIS virtual directory pointing to the DITestingApp folder with just Anonymous Authentication enabled. This application writes to log files located at c:\logs\DITesting\, but you can always change the path to a desired location by editing web.config log4net section.
 
@@ -29,3 +31,46 @@ This project internally uses following dependencies
 * Unity.AspNet.WebApi v4.0.1 Nuget package and its dependencies
 * Unity.Mvc v4.0.1 Nuget package
 * WebActivatorEx v2.2.0 Nuget package
+
+#How to test?
+
+As soon as you run the project, a log file is created at c:\logs\DITesting\DITesting.log. Every 20 seconds you start seeing following log entires
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Producing instance of Job 'DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557', class=Testing.Scheduler.HelloWorldJob
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Batch acquisition of 1 triggers
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Calling Execute on job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557
+
+> 12-05-2016 13:21:26 INFO  [2318D, ] Created HelloService instance [4]
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] 
+
+> ****
+
+> Job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557 fired @ Mon, 05 Dec 2016 18:21:26 GMT next scheduled for Mon, 05 Dec 2016 18:21:46 GMT
+
+> ***
+> 
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] 
+
+> ***
+> Hello World! from Quartz Job!
+> ***
+> 
+> 12-05-2016 13:21:26 INFO  [2318D, ] Disposed HelloService instance [4]
+
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Trigger instruction : NoInstruction
+> 
+
+And if you try to access the http://localhost/DITestingApp/api/Greetings REST end point, you will get following response back 
+
+>> Hello World! from Greetings REST api
+
+followed by these log entries in the log file
+
+> 12-05-2016 13:26:21 INFO  [2318D, ] Created HelloService instance [20]
+
+> 12-05-2016 13:26:21 INFO  [2318D, ] Disposed HelloService instance [20]
+

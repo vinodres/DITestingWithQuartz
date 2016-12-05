@@ -35,10 +35,15 @@ This project internally uses following dependencies
 As soon as you run the project, a log file is created at c:\logs\DITesting\DITesting.log. Every 20 seconds you start seeing following log entires
 
 > 12-05-2016 13:21:26 DEBUG [2318D, ] Producing instance of Job 'DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557', class=Testing.Scheduler.HelloWorldJob
+
 > 12-05-2016 13:21:26 DEBUG [2318D, ] Batch acquisition of 1 triggers
+
 > 12-05-2016 13:21:26 DEBUG [2318D, ] Calling Execute on job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557
+
 > 12-05-2016 13:21:26 INFO  [2318D, ] Created HelloService instance [4]
+
 > 12-05-2016 13:21:26 DEBUG [2318D, ] 
+
 > ****
 > Job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557 fired @ Mon, 05 Dec 2016 18:21:26 GMT next scheduled for Mon, 05 Dec 2016 18:21:46 GMT
 > ***

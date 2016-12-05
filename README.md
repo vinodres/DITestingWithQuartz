@@ -34,25 +34,29 @@ This project internally uses following dependencies
 
 As soon as you run the project, a log file is created at c:\logs\DITesting\DITesting.log. Every 20 seconds you start seeing following log entires
 
-12-05-2016 10:51:17 DEBUG [0108M712318D, ] Trigger instruction : NoInstruction
-
-12-05-2016 10:51:22 DEBUG [0108M712318D, ] Producing instance of Job 'DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6', class=Testing.Scheduler.HelloWorldJob
-
-12-05-2016 10:51:22 DEBUG [0108M712318D, ] Batch acquisition of 1 triggers
-
-12-05-2016 10:51:22 DEBUG [0108M712318D, ] Calling Execute on job DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6
-
-12-05-2016 10:51:22 DEBUG [0108M712318D, ] 
-****
-Job DEFAULT.bac2fadb-481d-420b-939c-fcfbde8e36b6 fired @ Mon, 05 Dec 2016 15:51:22 GMT next scheduled for Mon, 05 Dec 2016 15:51:27 GMT
-***
-
-12-05-2016 10:51:22 DEBUG [0108M712318D, ] 
-***
-Hello World! from Quartz Job!
-***
-
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Producing instance of Job 'DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557', class=Testing.Scheduler.HelloWorldJob
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Batch acquisition of 1 triggers
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Calling Execute on job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557
+> 12-05-2016 13:21:26 INFO  [2318D, ] Created HelloService instance [4]
+> 12-05-2016 13:21:26 DEBUG [2318D, ] 
+> ****
+> Job DEFAULT.4eb39ba9-156d-40cf-8a52-7dadc7849557 fired @ Mon, 05 Dec 2016 18:21:26 GMT next scheduled for Mon, 05 Dec 2016 18:21:46 GMT
+> ***
+> 
+> 12-05-2016 13:21:26 DEBUG [2318D, ] 
+> ***
+> Hello World! from Quartz Job!
+> ***
+> 
+> 12-05-2016 13:21:26 INFO  [2318D, ] Disposed HelloService instance [4]
+> 12-05-2016 13:21:26 DEBUG [2318D, ] Trigger instruction : NoInstruction
+> 
 
 And if you try to access the http://localhost/DITestingApp/api/Greetings REST end point, you will get following response back 
 
-Hello World! from Greetings REST api
+>> Hello World! from Greetings REST api
+
+followed by these log entries in the log file
+> 12-05-2016 13:26:21 INFO  [2318D, ] Created HelloService instance [20]
+> 12-05-2016 13:26:21 INFO  [2318D, ] Disposed HelloService instance [20]
+
